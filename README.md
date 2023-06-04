@@ -8,6 +8,8 @@ The project is developed using the following technologies:
 HTML5
 CSS3
 JavaScript
+
+
 Features
 Input age, weight, height, gender, activity level, goal, number of meals, diet preference, and health specifications to generate a customized meal plan.
 Utilize the Edamam API to fetch meal suggestions based on the provided details.
