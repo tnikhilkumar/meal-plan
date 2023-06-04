@@ -1,0 +1,389 @@
+/* Dark Theme */
+body {
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background-image: url("./images/bg_design.png");
+  opacity: 0.9; /* Adjust the opacity value (0.5) to change the opacity of the image */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed; /* Change to "fixed" for full-page background */
+  z-index: -1;
+  pointer-events: none; /* Disable pointer events on the pseudo-element */
+  border: none; /* Remove border */
+  overflow: hidden;
+}
+
+body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+}
+
+body::-webkit-scrollbar {
+  width: 6px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
+
+#mainContainer {
+max-width: 500px;
+margin: 0 auto;
+padding: 20px 20px 40px;  
+background-color: #000000;
+color: #201c1c; /* Added text color for light theme */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border: 1px solid rgb(255, 255, 255);
+border-radius: 30px;
+}
+
+#mainContainer.dark-theme {
+background-color: #1d1a1a;
+color: #785757;
+}
+
+#themeSwitch {
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+color: #333;
+}
+
+#themeSwitch.dark-theme {
+color: #fff;
+}
+
+form {
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 10px;
+margin-top: 20px;
+font-size: 1.1rem;
+}
+
+
+label {
+font-weight: bold;
+font-family: "Helvetica", Times, serif;
+color: #fcfcfc; /* Added text color for light theme */
+font-size: large;
+font-family: "Helvetica", Times, serif;;
+font-weight: bold;
+}
+
+input,
+select {
+/* width: 100%; */
+padding: 5px;
+color: #eae0e0; /* Added text color for light theme */
+background-color: #423333;
+}
+
+button[type="submit"] {
+width: 100%;
+padding: 10px;
+background-color: #333;
+color: #ffffff;
+font-family: "Helvetica", Times, serif;
+font-weight: bold;
+border: 2px solid white;
+cursor: pointer;
+background-color: #2850c7;
+font-size: 1.3rem;
+border: 2px solid white;
+}
+
+button[type="submit"]:hover {
+background-color: #b3f900;
+color: #000000;
+font-family: "Helvetica", Times, serif;
+font-weight: bold;
+font-size: 1.3rem;
+}
+
+#mealPlanDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+margin-top: 30px;
+color: #000000; /* Added text color for light theme */
+font-family: "Helvetica", Times, serif;
+font-weight: bold;
+font-size: 1.3rem;
+border-radius: 10px;
+
+}
+
+#mealPlanDisplay:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+margin-top: 30px;
+color: #ffffff; /* Added text color for light theme */
+font-family: "Helvetica", Times, serif;
+font-weight: bold;
+font-size: 1.3rem;
+border-radius: 10px;
+
+}
+
+.meal-plan-heading {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Helvetica", Times, serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 1px;
+  border-radius: 10px;
+  border: 2px solid white;
+  display: inline-block;
+  background-color: black;
+}
+.meal-plan-heading:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  font-size: 1.5rem;
+  font-family: "Helvetica", Times, serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 1px;
+  border-radius: 10px;
+  border: 2px solid white;
+  display: inline-block;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 100px;
+}
+
+th,
+td {
+padding: 10px;
+text-align: left;
+color: rgb(0, 0, 0);
+}
+
+th {
+background-color: #f5f5f5;
+font-weight: bold;
+}
+
+td {
+border-bottom: 1px solid #ddd;
+color: white;
+background-color: rgb(19, 17, 17);
+font-size: 0.8rem;
+font-family: "Helvetica", Times, serif;
+}
+
+.dark-theme th {
+background-color: #333;
+color: #fff;
+}
+
+.dark-theme td {
+border-bottom-color: #777;
+}
+
+.card {
+padding: 10px;
+background-color: #f5f5f5;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+color: #333; /* Added text color for light theme */
+}
+
+.card.dark-theme {
+background-color: #333;
+color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: rgb(196, 98, 121);
+  font-size: 2.5rem;
+  font-family: "Helvetica", Times, serif; 
+  border-radius: 10px;
+  position: relative;
+}
+
+h1:hover {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: rgb(50, 185, 226);
+  font-size: 2.5rem;
+  font-family: "Helvetica", Times, serif; 
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+}
+@keyframes flicker {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(238, 255, 0);
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+h1::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px dashed transparent;
+  border-radius: 20px;
+  animation: flicker 1.4s infinite;
+}
+span{
+  color: rgb(216, 245, 130); 
+}
+span:hover{
+  color: rgb(255, 255, 255);
+}
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="number"],
+select {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: #f4f4f4;
+  
+}
+
+#mainContainer.light-theme {
+  background-color: #fff;
+}
+
+button.light-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#mealPlanDisplay {
+  margin-top: 20px;
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label,
+  select,
+  input[type="number"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+#themeSwitch {
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+color: #333;
+display: flex;
+align-items: center;
+}
+
+#themeSwitch i {
+margin-right: 5px;
+}
+
+#themeSwitch.dark-theme {
+color: #fff;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+  
+  th,
+  td {
+    padding: 5px; /* Decrease padding for smaller screens */
+  }
+  
+  img {
+    max-width: 150px; /* Decrease maximum image width for smaller screens */
+  }
+}
